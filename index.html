@@ -8,13 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="跌跌撞撞，仍寻找自己的路">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="跌跌撞撞，仍寻找自己的路">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="跌跌撞撞，仍寻找自己的路">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -48,7 +51,7 @@
 			<img src="/assets/blogImg/instpe.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Instpe</a></h1>
+		  <h1 class="header-author"><a href="/">袭冬亦</a></h1>
 		</hgroup>
 		
 
@@ -57,11 +60,13 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/items">成果</a></li>
+				<li><a href="/items">经历</a></li>
 	        
-				<li><a href="/douban">读书</a></li>
+				<li><a href="/busy">在忙</a></li>
 	        
-				<li><a href="/tags/收获/">收获</a></li>
+				<li><a href="/douban">书柜</a></li>
+	        
+				<li><a href="/tags/日常/">日常</a></li>
 	        
 			</ul>
 		</nav>
@@ -106,10 +111,12 @@
 				<img src="/assets/blogImg/instpe.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Instpe</h1>
+			  <h1 class="header-author js-header-author">袭冬亦</h1>
 			</hgroup>
 			
 			
+			
+				
 			
 				
 			
@@ -135,13 +142,15 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 20%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/items">成果</a></li>
+					<li style="width: 20%"><a href="/items">经历</a></li>
 		        
-					<li style="width: 25%"><a href="/douban">读书</a></li>
+					<li style="width: 20%"><a href="/busy">在忙</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/收获/">收获</a></li>
+					<li style="width: 20%"><a href="/douban">书柜</a></li>
+		        
+					<li style="width: 20%"><a href="/tags/日常/">日常</a></li>
 		        
 				</ul>
 			</nav>
@@ -158,6 +167,156 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-20180809" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/09/20180809/">被nodejs的异步折磨的一天</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/09/20180809/" class="archive-article-date">
+  	<time datetime="2018-06-08T17:06:03.213Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div id="aplayer-emBEqljI" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+				<pre class="aplayer-lrc-content">[00:00.00] 作曲 : 薛之谦
+[00:01.00] 作词 : 薛之谦
+[00:04.200]
+[00:21.120]简单点说话的方式简单点
+[00:28.560]
+[00:30.200]递进的情绪请省略
+[00:33.640]你又不是个演员
+[00:36.380]别设计那些情节
+[00:39.360]
+[00:41.930]没意见我只想看看你怎么圆
+[00:50.410]
+[00:51.540]你难过的太表面 像没天赋的演员
+[00:57.150]观众一眼能看见
+[01:00.190]
+[01:02.220]该配合你演出的我演视而不见
+[01:07.680]在逼一个最爱你的人即兴表演
+[01:12.900]什么时候我们开始收起了底线
+[01:18.020]顺应时代的改变看那些拙劣的表演
+[01:23.420]可你曾经那么爱我干嘛演出细节
+[01:28.630]我该变成什么样子才能延缓厌倦
+[01:33.870]原来当爱放下防备后的这些那些
+[01:39.370]才是考验
+[01:41.970]
+[01:44.600]没意见你想怎样我都随便
+[01:52.890]
+[01:54.530]你演技也有限
+[01:57.580]又不用说感言
+[02:00.150]分开就平淡些
+[02:02.990]
+[02:05.000]该配合你演出的我演视而不见
+[02:10.530]别逼一个最爱你的人即兴表演
+[02:15.810]什么时候我们开始没有了底线
+[02:21.010]顺着别人的谎言被动就不显得可怜
+[02:26.430]可你曾经那么爱我干嘛演出细节
+[02:31.520]我该变成什么样子才能配合出演
+[02:36.720]原来当爱放下防备后的这些那些
+[02:41.860]都有个期限
+[02:44.600]
+[02:47.560]其实台下的观众就我一个
+[02:53.040]其实我也看出你有点不舍
+[02:58.340]场景也习惯我们来回拉扯
+[03:02.930]还计较着什么
+[03:07.390]
+[03:08.710]其实说分不开的也不见得
+[03:14.040]其实感情最怕的就是拖着
+[03:19.210]越演到重场戏越哭不出了
+[03:24.070]是否还值得
+[03:28.120]
+[03:29.070]该配合你演出的我尽力在表演
+[03:34.390]像情感节目里的嘉宾任人挑选
+[03:39.680]如果还能看出我有爱你的那面
+[03:44.820]请剪掉那些情节让我看上去体面
+[03:50.040]可你曾经那么爱我干嘛演出细节
+[03:55.310]不在意的样子是我最后的表演
+[04:01.050]是因为爱你我才选择表演 这种成全
+</pre>
+			</div>
+			<script>
+				var ap = new APlayer({
+					element: document.getElementById("aplayer-emBEqljI"),
+					narrow: false,
+					autoplay: true,
+					showlrc: 2,
+					music: {
+						title: "演员",
+						author: "薛之谦",
+						url: "https://music.163.com/song/media/outer/url?id=32507038.mp3",
+						pic: "https://p1.music.126.net/qpvBqYIqkRhO9Ry2qOCdJQ==/2942293117852634.jpg?param=130y130",
+					}
+				});
+				window.aplayers || (window.aplayers = []);
+				window.aplayers.push(ap);
+			</script>
+<p>其实我明白，从她离开的那天起，我就再也没有对未来抱有过期望。</p>
+        
+          <a class="article-more-a" href="/2018/06/09/20180809/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/09/20180809/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-20180608(2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -165,7 +324,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/09/20180608(2)/">搭好了一个家呀</a>
+      <a class="article-title" href="/2018/06/09/20180608(2)/">以后，这里就是家啦</a>
     </h1>
   
 
@@ -178,7 +337,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <div id="aplayer-zvFKpyyP" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:300px;">
+        <div id="aplayer-iLOiNZfZ" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
 				<pre class="aplayer-lrc-content">[00:37.496]让我再看你一遍
 [00:38.694]从南到北
 [00:44.476]像是被五环路蒙住的双眼
@@ -216,9 +375,9 @@
 			</div>
 			<script>
 				var ap = new APlayer({
-					element: document.getElementById("aplayer-zvFKpyyP"),
+					element: document.getElementById("aplayer-iLOiNZfZ"),
 					narrow: false,
-					autoplay: true,
+					autoplay: false,
 					showlrc: 2,
 					music: {
 						title: "安和桥",
@@ -246,7 +405,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">收获</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
         		</li>
       		
 		</ul>
@@ -296,7 +455,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 Instpe
+    		&copy; 2018 袭冬亦
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -381,6 +540,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">收获</a>
               </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -436,6 +599,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           
             <li class="search-li">
               <a href="http://ethereon.github.io/netscope/#/editor" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="http://chocoluffy.com/about/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>有榜样啦</a>
             </li>
           
         </ul>
