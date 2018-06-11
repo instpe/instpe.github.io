@@ -6,23 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>读书 | Hexo</title>
+  <title>被nodejs的异步折磨的一天 | 冬亦的家</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="追风筝的人2018-06-02 15:03:32没有评论当我谈跑步时我谈些什么2018-06-02 14:44:12没有评论.leisure{width:100%;min-height:130px;margin:20px 0;display:block;clear:both}.leisure img{width:128px;height:182px;float:left;background-co">
-<meta property="og:type" content="website">
-<meta property="og:title" content="读书">
-<meta property="og:url" content="http://yoursite.com/douban/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="追风筝的人2018-06-02 15:03:32没有评论当我谈跑步时我谈些什么2018-06-02 14:44:12没有评论.leisure{width:100%;min-height:130px;margin:20px 0;display:block;clear:both}.leisure img{width:128px;height:182px;float:left;background-co">
+  <meta name="description" content="[00:00.00] 作曲 : 薛之谦 [00:01.00] 作词 : 薛之谦 [00:04.200] [00:21.120]简单点说话的方式简单点 [00:28.560] [00:30.200]递进的情绪请省略 [00:33.640]你又不是个演员 [00:36.380]别设计那些情节 [00:39.360] [00:41.930]没意见我只想看看你怎么圆 [00:50.410] [0">
+<meta name="keywords" content="日常">
+<meta property="og:type" content="article">
+<meta property="og:title" content="被nodejs的异步折磨的一天">
+<meta property="og:url" content="http://yoursite.com/2018/06/08/20180809/index.html">
+<meta property="og:site_name" content="冬亦的家">
+<meta property="og:description" content="[00:00.00] 作曲 : 薛之谦 [00:01.00] 作词 : 薛之谦 [00:04.200] [00:21.120]简单点说话的方式简单点 [00:28.560] [00:30.200]递进的情绪请省略 [00:33.640]你又不是个演员 [00:36.380]别设计那些情节 [00:39.360] [00:41.930]没意见我只想看看你怎么圆 [00:50.410] [0">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://img3.doubanio.com/view/subject/l/public/s1727290.jpg">
-<meta property="og:image" content="https://img3.doubanio.com/view/subject/l/public/s3507580.jpg">
+<meta property="og:updated_time" content="2018-06-11T18:33:48.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="读书">
-<meta name="twitter:description" content="追风筝的人2018-06-02 15:03:32没有评论当我谈跑步时我谈些什么2018-06-02 14:44:12没有评论.leisure{width:100%;min-height:130px;margin:20px 0;display:block;clear:both}.leisure img{width:128px;height:182px;float:left;background-co">
-<meta name="twitter:image" content="https://img3.doubanio.com/view/subject/l/public/s1727290.jpg">
+<meta name="twitter:title" content="被nodejs的异步折磨的一天">
+<meta name="twitter:description" content="[00:00.00] 作曲 : 薛之谦 [00:01.00] 作词 : 薛之谦 [00:04.200] [00:21.120]简单点说话的方式简单点 [00:28.560] [00:30.200]递进的情绪请省略 [00:33.640]你又不是个演员 [00:36.380]别设计那些情节 [00:39.360] [00:41.930]没意见我只想看看你怎么圆 [00:50.410] [0">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="冬亦的家" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -38,6 +37,8 @@
 
   
 
+<link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
 </head>
 
 <body>
@@ -52,8 +53,10 @@
 			<img src="/assets/blogImg/instpe.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">袭冬亦</a></h1>
+		  <h1 class="header-author"><a href="/">冬亦</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">我听见风的声音</p>
 		
 
 		<nav class="header-menu">
@@ -61,11 +64,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/items">经历</a></li>
-	        
-				<li><a href="/busy">在忙</a></li>
-	        
-				<li><a href="/douban">书柜</a></li>
+				<li><a href="/books">书柜</a></li>
 	        
 			</ul>
 		</nav>
@@ -106,14 +105,12 @@
 				<img src="/assets/blogImg/instpe.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">袭冬亦</h1>
+			  <h1 class="header-author js-header-author">冬亦</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>我听见风的声音<i class="icon icon-quo-right"></i></p>
 			
 			
-				
-			
-				
 			
 				
 			
@@ -132,16 +129,12 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/items">经历</a></li>
-		        
-					<li style="width: 25%"><a href="/busy">在忙</a></li>
-		        
-					<li style="width: 25%"><a href="/douban">书柜</a></li>
+					<li style="width: 50%"><a href="/books">书柜</a></li>
 		        
 				</ul>
 			</nav>
@@ -156,65 +149,119 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="-douban" class="article article-type- " itemscope itemprop="blogPost">
+            <article id="post-20180809" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      读书
+      被nodejs的异步折磨的一天
     </h1>
   
 
         
-        <a href="/douban/index.html" class="archive-article-date">
-  	<time datetime="2018-06-09T07:55:09.533Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-09</time>
+        <a href="/2018/06/08/20180809/" class="archive-article-date">
+  	<time datetime="2018-06-08T12:53:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <article class="leisure"><aside><img src=https://img3.doubanio.com/view/subject/l/public/s1727290.jpg alt=追风筝的人></aside><section class="intro"><ul><li><a class href=https://book.douban.com/subject/1770782/>追风筝的人</a></li><li>2018-06-02 15:03:32</li><li>没有评论</li></ul></section></article><hr><article class="leisure"><aside><img src=https://img3.doubanio.com/view/subject/l/public/s3507580.jpg alt=当我谈跑步时我谈些什么></aside><section class="intro"><ul><li><a class href=https://book.douban.com/subject/3369600/>当我谈跑步时我谈些什么</a></li><li>2018-06-02 14:44:12</li><li>没有评论</li></ul></section></article><hr><style>.leisure{width:100%;min-height:130px;margin:20px 0;display:block;clear:both}.leisure img{width:128px;height:182px;float:left;background-color:white;padding:5px;border-radius:5px;border:1px solid #dedede;margin:-5px 10px 5px 0}.leisure .intro{margin:5px 10px 5px 0;width:100%}.leisure .intro ul{list-style:none;margin-left:0;min-height:188px}.leisure .intro ul li{line-height:20px;margin: 10px 0;}.leisure .intro ul li:first-child{font-size:20px;padding-bottom:5px;margin-bottom:10px;border-bottom:1px #eee solid}.leisure .intro ul li:before{content:none}</style>
+        <div id="aplayer-LtIYtMtn" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;width:100%;">
+				<pre class="aplayer-lrc-content">[00:00.00] 作曲 : 薛之谦
+[00:01.00] 作词 : 薛之谦
+[00:04.200]
+[00:21.120]简单点说话的方式简单点
+[00:28.560]
+[00:30.200]递进的情绪请省略
+[00:33.640]你又不是个演员
+[00:36.380]别设计那些情节
+[00:39.360]
+[00:41.930]没意见我只想看看你怎么圆
+[00:50.410]
+[00:51.540]你难过的太表面 像没天赋的演员
+[00:57.150]观众一眼能看见
+[01:00.190]
+[01:02.220]该配合你演出的我演视而不见
+[01:07.680]在逼一个最爱你的人即兴表演
+[01:12.900]什么时候我们开始收起了底线
+[01:18.020]顺应时代的改变看那些拙劣的表演
+[01:23.420]可你曾经那么爱我干嘛演出细节
+[01:28.630]我该变成什么样子才能延缓厌倦
+[01:33.870]原来当爱放下防备后的这些那些
+[01:39.370]才是考验
+[01:41.970]
+[01:44.600]没意见你想怎样我都随便
+[01:52.890]
+[01:54.530]你演技也有限
+[01:57.580]又不用说感言
+[02:00.150]分开就平淡些
+[02:02.990]
+[02:05.000]该配合你演出的我演视而不见
+[02:10.530]别逼一个最爱你的人即兴表演
+[02:15.810]什么时候我们开始没有了底线
+[02:21.010]顺着别人的谎言被动就不显得可怜
+[02:26.430]可你曾经那么爱我干嘛演出细节
+[02:31.520]我该变成什么样子才能配合出演
+[02:36.720]原来当爱放下防备后的这些那些
+[02:41.860]都有个期限
+[02:44.600]
+[02:47.560]其实台下的观众就我一个
+[02:53.040]其实我也看出你有点不舍
+[02:58.340]场景也习惯我们来回拉扯
+[03:02.930]还计较着什么
+[03:07.390]
+[03:08.710]其实说分不开的也不见得
+[03:14.040]其实感情最怕的就是拖着
+[03:19.210]越演到重场戏越哭不出了
+[03:24.070]是否还值得
+[03:28.120]
+[03:29.070]该配合你演出的我尽力在表演
+[03:34.390]像情感节目里的嘉宾任人挑选
+[03:39.680]如果还能看出我有爱你的那面
+[03:44.820]请剪掉那些情节让我看上去体面
+[03:50.040]可你曾经那么爱我干嘛演出细节
+[03:55.310]不在意的样子是我最后的表演
+[04:01.050]是因为爱你我才选择表演 这种成全
+</pre>
+			</div>
+			<script>
+				var ap = new APlayer({
+					element: document.getElementById("aplayer-LtIYtMtn"),
+					narrow: false,
+					autoplay: false,
+					showlrc: 2,
+					music: {
+						title: "演员",
+						author: "薛之谦",
+						url: "https://music.163.com/song/media/outer/url?id=32507038.mp3",
+						pic: "https://p1.music.126.net/qpvBqYIqkRhO9Ry2qOCdJQ==/2942293117852634.jpg?param=130y130",
+					}
+				});
+				window.aplayers || (window.aplayers = []);
+				window.aplayers.push(ap);
+			</script>
+<a id="more"></a>
       
 
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/alipay.jpeg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/img/wechat.png">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">日常</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -265,7 +312,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/douban/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/08/20180809/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -277,6 +324,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2018/06/09/3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          告别
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/06/07/20180608(2)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">家</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -314,7 +380,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 袭冬亦
+    		&copy; 2018 冬亦
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -327,7 +393,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -390,6 +456,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">日常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
             
             <div class="clearfix"></div>
