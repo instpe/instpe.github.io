@@ -4,7 +4,7 @@
 
 # Site
 title: 冬亦的家
-subtitle: 既然决定一个人，又何必害怕孤独
+subtitle: 我听见风的声音
 description: 
 keywords:
 author: 冬亦
@@ -80,9 +80,13 @@ theme: yilia
 deploy:
   type: git
   repository: git@github.com:instpe/instpe.github.io.git
-  branch: master
+  branch: master 
 douban:
-    user: 167681389
+  user: 167681389
+  builtin: true
+  book:
+    title: '书柜'
+  timeout: 10000 
 jsonContent:
     meta: false
     pages: false
